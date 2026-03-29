@@ -225,7 +225,7 @@ function handleBtnClick() {
 ### Syntax
 
 ```markdown
-Inline math is supported: $a^2 + b^2 = c^2$. Block math is also supported
+Inline math is supported: $a^2 + b^2 = c^2$ and $sigma$. Block math is also supported
 
 $
   "grad" & f       &&= gradient f \\
@@ -238,7 +238,9 @@ $
 
 ### Output
 
-Inline math is supported: $a^2 + b^2 = c^2$. Block math is also supported
+Inline math is supported: $a^2 + b^2 = c^2$ and $sigma$. Block math is also supported
+
+inline: $sigma$
 
 $
   "grad" & f       &&= gradient f \\

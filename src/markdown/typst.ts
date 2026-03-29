@@ -6,7 +6,7 @@ import type { Nodes } from 'mdast';
 const typstTemplate = `
     #set page(width: auto, height: auto, fill: none, margin: (
         top: 0em,
-        bottom: 0.5em,
+        bottom: 0em,
         left: 0.2em,
         right: 0.2em,
     ))

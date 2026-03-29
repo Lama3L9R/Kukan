@@ -91,8 +91,8 @@
 }
 
 .md-typst-math-inline > svg {
-    width: 15%; 
-    height: auto;
+    width: auto; 
+    height: 1em;
     
     display: inline-block;
     vertical-align: middle;
