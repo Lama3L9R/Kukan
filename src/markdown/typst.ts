@@ -26,6 +26,21 @@ function typstCompile(mathContent: string, inline: boolean) {
         encoding: 'utf-8',
     })
 
+    if (proc.error) {
+        console.error('Failed to execute typst command! \n', proc.error)
+        
+        const { syscall, code } = <any> proc.error
+
+        return {
+            type: 'html',
+            value: `<div class="md-typst-error">
+                <p class="md-typst-error-message">Failed to execute typst command for inline typst math expression:</p>
+                <pre class="md-typst-error-code">${mathContent}</pre>
+                <pre class="md-typst-error-output"><code>Failed to spawn typst process (${syscall} -> ${code})</code></pre>
+            </div>`
+        }
+    }
+
     if (proc.status) {
         console.error('Typst compile failed! \n', proc.stderr)
 
