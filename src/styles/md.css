@@ -110,3 +110,8 @@
 .md-p {
     margin-bottom: 1rem;
 }
+
+.md-p > a {
+    color: var(--accent);
+    text-decoration: underline;
+}
