@@ -1,0 +1,7 @@
+---
+import Page from '../components/Page.astro';
+import { ENABLE_LINK } from '../consts';
+---
+{
+    ENABLE_LINK ? <Page src="!links" /> : (void 0)
+}

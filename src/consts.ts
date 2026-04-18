@@ -20,6 +20,8 @@ export let BUILD_INFO = {
     tag: "1.0"
 }
 
+export const ENABLE_LINK = false
+
 const infoPath = path.resolve(process.cwd(), 'build.json')
 
 if (fs.existsSync(infoPath)) {

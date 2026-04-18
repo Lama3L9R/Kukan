@@ -1,5 +1,5 @@
 ---
-import { SITE_TITLE } from "../consts";
+import { ENABLE_LINK, SITE_TITLE } from "../consts";
 
 ---
 
@@ -21,6 +21,11 @@ import { SITE_TITLE } from "../consts";
 			<div class="basis-auto header-element-container"> 
 				<a href="/blog"> posts </a>
 			</div>
+			{
+                ENABLE_LINK ? <div class="basis-auto header-element-container"> 
+		    		<a href="/links"> links </a>
+		    	</div> : void 0
+			}
 		</div>
 	</nav>
 </header>

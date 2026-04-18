@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 import Page from '../../components/Page.astro';
 import { BUILD_INFO } from '../../consts';
 
-const excludedAttributes = ["dev", "draft", "index", "about"];
+const excludedAttributes = ["dev", "draft", "index", "about", "links"];
 
 const posts = (await getCollection("pages")).filter(it => {
 	if (BUILD_INFO.buildType === "production") {

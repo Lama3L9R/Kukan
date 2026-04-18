@@ -62,6 +62,8 @@ The blockquote element represents content that is quoted from another source, op
 
 [^1]: The above quote is excerpted from Rob Pike's [talk](https://www.youtube.com/watch?v=PAAkCSZUG1c) during Gopherfest, November 18, 2015.
 
+[Some Link Test](https://www.youtube.com/watch?v=PAAkCSZUG1c)
+
 ## Tables
 
 ### Syntax
@@ -250,4 +252,10 @@ $
 
 $
   sigma = sqrt("Var"(X))
+$
+
+### Error
+
+$
+    F = ma
 $
