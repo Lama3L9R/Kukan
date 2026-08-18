@@ -36,7 +36,7 @@ function typstCompile(mathContent: string, inline: boolean) {
             value: `<div class="md-typst-error">
                 <p class="md-typst-error-message">Failed to execute typst command for inline typst math expression:</p>
                 <pre class="md-typst-error-code">${mathContent}</pre>
-                <pre class="md-typst-error-output"><code>Failed to spawn typst process (${syscall} -> ${code})</code></pre>
+                <pre class="md-typst-error-output">Failed to spawn typst process (${syscall} -> ${code})</pre>
             </div>`
         }
     }
@@ -49,7 +49,7 @@ function typstCompile(mathContent: string, inline: boolean) {
             value: `<div class="md-typst-error">
                 <p class="md-typst-error-message">Failed to compile inline typst math expression:</p>
                 <pre class="md-typst-error-code">${mathContent}</pre>
-                <pre class="md-typst-error-output"><code>${proc.stderr}</code></pre>
+                <pre class="md-typst-error-output">${proc.stderr}</pre>
             </div>`
         }
     }
