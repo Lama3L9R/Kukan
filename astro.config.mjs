@@ -21,7 +21,7 @@ export default defineConfig({
         },
         themes: ["houston"],
         plugins: [ pluginCollapsibleSections(), pluginLineNumbers(), pluginLanguageBadge() ]
-    }), mdx(), sitemap()],
+    }), sitemap()],
     markdown: {
         smartypants: false, /* WTF is this??? */
         remarkRehype: {
