@@ -59,21 +59,63 @@ if (props.src) {
             </div>
         </noscript>
 
-        <div class="flex flex-col justify-center items-center w-full">
-            <div id="master-view" style={{
-                width: "100ch",
-                maxWidth: "100ch",
-            }}>
-                <Header />
+		<style>
+			@media (max-width: 100ch) {
+				.right-bar {
+					display: none !important;
+				}
+			}
 
-		        <div class="flex flex-row justify-between">
-		        	<BodyBox class="grow basis-4/5 flex flex-col">
+			.main-container {
+				width: 100vw;
+				height: 100vh;
+				max-width: 100ch;
+				max-height: 100vh;
+				padding-left: 1em;
+				padding-right: 1em;
+			}
+
+			.header-container-small {
+				display: none;
+			}
+
+			@media (max-width: 570px) {
+				.header-container {
+					display: none !important;
+				}
+
+				.header-container-small {
+					display: flow !important;
+				}
+			}
+
+			.flex-grow {
+				flex: 1
+			}
+		</style>
+
+        <div class="flex flex-col items-center" style={{
+			width: "100vw",
+			height: "100vh"
+		}}>
+            <div id="master-view" class="flex flex-grow flex-col justify-between main-container">
+                <div class="header-container-small">
+					<Header smallIcon={true}/>
+				</div>
+
+				<div class="header-container">
+					<Header />
+				</div>
+
+
+		        <div class="flex flex-grow flex-row justify-between">
+		        	<BodyBox class="flex-grow basis-4/5 flex flex-col">
                         {
                             Content ? <Content /> : <slot />
                         }
 		        	</BodyBox>
                 
-		        	<RightBar class="grow-0 basis-1/5" />
+		        	<RightBar class="grow-0 basis-1/5 right-bar" />
 		        </div>
             
 		        <Footer />

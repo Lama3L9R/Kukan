@@ -3,6 +3,7 @@ import fs from 'fs'
 import path from 'path'
 
 export const SITE_TITLE = 'lamadaemon.blog'
+export const SITE_TITLE_SMALL = 'l.blog'
 export const SITE_DESCRIPTION = '前后端 | 电子 | 嵌入式 | 逆向 | 喜欢老技术但是新技术'
 export const COPYRIGHT = 'lamadaemon. All rights reserved.'
 
@@ -20,7 +21,7 @@ export let BUILD_INFO = {
     tag: "1.0"
 }
 
-export const ENABLE_LINK = false
+export const ENABLE_LINK = true
 
 const infoPath = path.resolve(process.cwd(), 'build.json')
 

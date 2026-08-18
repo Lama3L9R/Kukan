@@ -1,5 +1,8 @@
 ---
-import { ENABLE_LINK, SITE_TITLE } from "../consts";
+import { transform } from "astro:schema";
+import { ENABLE_LINK, SITE_TITLE, SITE_TITLE_SMALL } from "../consts";
+
+const { smallIcon } = Astro.props
 
 ---
 
@@ -9,10 +12,14 @@ import { ENABLE_LINK, SITE_TITLE } from "../consts";
 		paddingTop: "1.5rem"
 	}}>
 		<div class="flex flex-row header-space items-center">
-			<div class="basis-auto header-root-sp self-center"> 
-				<a href="/" style={{
-					color: "#282936"
-				}}>[{SITE_TITLE}] </a>
+			<div class={smallIcon ? "basis-auto header-root-spsm self-center" : "basis-auto header-root-sp self-center"}> 
+				<div style={{
+					//transform: "translate(-1px,1px)"
+				}}>
+					<a href="/" style={{
+						color: "#282936",
+					}}>[{smallIcon ? SITE_TITLE_SMALL : SITE_TITLE}]</a>
+				</div>
 			</div>
 
 			<div class="basis-auto header-element-container"> 
@@ -31,6 +38,12 @@ import { ENABLE_LINK, SITE_TITLE } from "../consts";
 </header>
 
 <style>
+	.header-root-spsm {
+		padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+		margin-right: 0.5rem;
+		background-color: #ebff87;
+	}
+
 	.header-root-sp {
 		padding: 0.2rem 1rem 0.2rem 1rem;
 		margin-right: 2rem;
@@ -38,7 +51,7 @@ import { ENABLE_LINK, SITE_TITLE } from "../consts";
 	}
 
 	.header-element-container {
-		padding: 0.2rem 1rem 0.2rem 1rem;
+		padding: 0.2rem 0.75rem 0.2rem 0.75rem;
 		color: var(--accent);
 		font-weight: 500;
 		text-decoration: underline;
