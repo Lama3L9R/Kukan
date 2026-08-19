@@ -222,6 +222,11 @@ function handleBtnClick() {
 </script>
 <button onclick="handleBtnClick()">Click Me</button>
 
+### Styled Components
+
+<button class="md-button">Example Button</button>
+<input type="text" class="md-textfield" value="Example InputField" />
+
 ## Typst Math Integration
 
 ### Syntax
