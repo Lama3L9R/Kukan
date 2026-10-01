@@ -6,11 +6,11 @@ const props = Astro.props
 <div {...props} style={{
     marginTop: "1.5rem",
     paddingLeft: "3rem",
+    minWidth: "max-content",
 }}>
 
     <div style={{
         display: "inline-grid",
-
     }}>
         <div class="flex flex-row items-center" style={{
         }}> <!-- Title part -->
@@ -21,6 +21,7 @@ const props = Astro.props
                 fontSize: "x-large",
                 fontWeight: "600",
                 marginLeft: "0.5rem",
+                whiteSpace: "nowrap",
             }}
             >{SITE_TITLE}</a>
         </div>
