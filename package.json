@@ -19,12 +19,14 @@
     "@expressive-code/plugin-line-numbers": "^0.41.7",
     "@tailwindcss/vite": "^4.2.2",
     "@types/hast": "^3.0.4",
+    "acorn": "^8.16.0",
     "astro": "^6.1.0",
     "astro-expressive-code": "^0.41.7",
     "dayjs": "^1.11.20",
     "expressive-code-language-badge": "^1.1.0",
     "hast-util-from-html": "^2.0.3",
     "mdast-util-find-and-replace": "^3.0.2",
+    "micromark-extension-mdx-jsx": "^3.0.2",
     "rehype": "^13.0.2",
     "remark": "^15.0.1",
     "remark-toc": "^9.0.0",
@@ -34,6 +36,10 @@
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.19",
-    "@types/mdast": "^4.0.4"
+    "@types/mdast": "^4.0.4",
+    "mdast-util-from-markdown": "^2.0.3",
+    "mdast-util-mdx-expression": "^2.0.1",
+    "mdast-util-mdx-jsx": "^3.2.0",
+    "micromark-util-types": "^2.0.2"
   }
 }

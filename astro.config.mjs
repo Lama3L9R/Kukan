@@ -10,6 +10,8 @@ import { pluginLineNumbers } from '@expressive-code/plugin-line-numbers';
 import { pluginLanguageBadge } from 'expressive-code-language-badge';
 import transformMdElement from './src/markdown/transform';
 import remarkTypstMath from './src/markdown/typst';
+import remarkTypstMdx from './src/markdown/typst-mdx';
+import remarkRawMdx from './src/markdown/raw-mdx';
 
 export default defineConfig({
     site: 'https://blog.v2.lama.icu',
@@ -21,6 +23,8 @@ export default defineConfig({
         },
         themes: ["houston"],
         plugins: [ pluginCollapsibleSections(), pluginLineNumbers(), pluginLanguageBadge() ]
+    }), mdx({
+        remarkPlugins: [remarkTypstMdx, remarkRawMdx],
     }), sitemap()],
     markdown: {
         smartypants: false, /* WTF is this??? */
